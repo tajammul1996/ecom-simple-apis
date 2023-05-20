@@ -19,6 +19,7 @@ export const AuthController = {
         const bearer = req.headers.authorization;
 
         if (!bearer || !bearer.startsWith('Bearer ')) {
+
             return res.status(401).json({ message: 'Unauthorized' });
         }
 
@@ -31,6 +32,7 @@ export const AuthController = {
             req.user = payload;
             next();
         } catch (error) {
+            console.log(error);
             return res.status(401).json({ message: 'Unauthorized' });
         }
     },
@@ -76,7 +78,7 @@ export const AuthController = {
     me: async (req: RequestWithUser, res: Response) => {
         try {
             const email = req.user.email;
-            const user = await prisma.user.findUnique({ where: { email } });
+            const user = await prisma.user.findUnique({ where: { email }, select: { id: true, email: true, name: true, avatar: true } });
             if (!user) return res.status(404).json({ message: 'User not found' });
 
             return res.status(200).json({ status: 'success', data: user });

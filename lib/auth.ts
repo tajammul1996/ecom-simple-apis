@@ -18,7 +18,7 @@ type User = {
 export const createJWT = (user: User): string => {
     const token = jwt.sign(
         { id: user.id, email: user.email },
-        "adofijaf80rewnfd",
+        process.env.JWT_SECRET as string,
     );
     return token;
 };
