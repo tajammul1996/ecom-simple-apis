@@ -14,10 +14,10 @@ export const ProductController = {
                     orderBy: { createdAt: 'desc' },
                     where: {
                         name: {
-                            contains: req.query.search as string || ''
+                            contains: req.query.search as string || 'tshirt'
                         },
                         description: {
-                            contains: req.query.search as string || ''
+                            contains: req.query.search as string || 'tshirt'
                         }
                     }
                 }
