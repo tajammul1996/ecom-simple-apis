@@ -22,6 +22,6 @@ app.use("/api/products", productRouter)
 app.use("/api/orders", AuthController.protect, orderRouter)
 app.use("/api/cart", AuthController.protect, cartRouter)
 
-app.listen(3001, () => {
-    console.log("Server is running on port 3001");
+app.listen(3005, () => {
+    console.log("Server is running on port 3005");
 });
