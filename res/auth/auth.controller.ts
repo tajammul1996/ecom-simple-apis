@@ -52,7 +52,7 @@ export const AuthController = {
         return res.status(200).json({ token, status: 'success', message: 'Logged in' });
     },
 
-    register: async (req: Request, res: Response) => {
+    register: async (req: Request, res: Response, next: NextFunction) => {
         try {
             const { email, password, name } = req.body;
             if (!email || !password || !name) return res.status(400).json({ message: 'Missing credentials (name, email, password)' });
@@ -62,6 +62,13 @@ export const AuthController = {
 
             const hashedPassword = await hashPassword(password);
             const newUser = await prisma.user.create({ data: { email, password: hashedPassword, name } });
+
+            // @ts-ignore
+            await prisma.cart.create({
+                data: {
+                    userId: newUser.id
+                }
+            })
 
             const token = createJWT(newUser);
             return res.status(200).json({ token, status: 'success', message: 'Logged in' });
@@ -74,7 +81,7 @@ export const AuthController = {
     logout: async (req: Request, res: Response) => {
         return res.status(200).json({ status: 'success', message: 'Logged out' });
     },
-    
+
     me: async (req: RequestWithUser, res: Response) => {
         try {
             const email = req.user.email;

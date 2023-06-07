@@ -1,0 +1,42 @@
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "info@access.org.in",
+    "password": "Test@123",
+    "name": "Tajammul Pasha"
+}
+
+###
+
+GET http://localhost:3001/api/cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmNDA1MDdmLTk3ZmQtNDgzMy1hMTE5LWUyOWZhMzE0ZWIzNiIsImVtYWlsIjoiaW5mb0BhY2Nlc3Mub3JnLmluIiwiaWF0IjoxNjg2MTU2MDc0fQ.30B-gWxGQmEp5vkE79AFcduRPzm8zqhsa3rJ8jfzNz0
+
+
+###
+
+POST http://localhost:3001/api/cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmNDA1MDdmLTk3ZmQtNDgzMy1hMTE5LWUyOWZhMzE0ZWIzNiIsImVtYWlsIjoiaW5mb0BhY2Nlc3Mub3JnLmluIiwiaWF0IjoxNjg2MTU2MDc0fQ.30B-gWxGQmEp5vkE79AFcduRPzm8zqhsa3rJ8jfzNz0
+  
+  {
+    "product": {
+        "id": "002e22c2-1e57-4647-b67a-af2c843eb353",
+        "quantity": 4
+    }
+  }  
+
+###
+
+DELETE http://localhost:3001/api/cart/a4e241ee-dc22-4816-8acc-1d3bda161bca
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmNDA1MDdmLTk3ZmQtNDgzMy1hMTE5LWUyOWZhMzE0ZWIzNiIsImVtYWlsIjoiaW5mb0BhY2Nlc3Mub3JnLmluIiwiaWF0IjoxNjg2MTU2MDc0fQ.30B-gWxGQmEp5vkE79AFcduRPzm8zqhsa3rJ8jfzNz0
+
+###
+
+DELETE http://localhost:3001/api/cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmNDA1MDdmLTk3ZmQtNDgzMy1hMTE5LWUyOWZhMzE0ZWIzNiIsImVtYWlsIjoiaW5mb0BhY2Nlc3Mub3JnLmluIiwiaWF0IjoxNjg2MTU2MDc0fQ.30B-gWxGQmEp5vkE79AFcduRPzm8zqhsa3rJ8jfzNz0
+
+
