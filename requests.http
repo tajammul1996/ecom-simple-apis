@@ -9,14 +9,14 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3001/api/cart
+GET http://64.227.130.148/api/cart
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmNDA1MDdmLTk3ZmQtNDgzMy1hMTE5LWUyOWZhMzE0ZWIzNiIsImVtYWlsIjoiaW5mb0BhY2Nlc3Mub3JnLmluIiwiaWF0IjoxNjg2MTU2MDc0fQ.30B-gWxGQmEp5vkE79AFcduRPzm8zqhsa3rJ8jfzNz0
 
 
 ###
 
-POST http://localhost:3001/api/cart
+POST http://64.227.130.148/api/cart
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBmNDA1MDdmLTk3ZmQtNDgzMy1hMTE5LWUyOWZhMzE0ZWIzNiIsImVtYWlsIjoiaW5mb0BhY2Nlc3Mub3JnLmluIiwiaWF0IjoxNjg2MTU2MDc0fQ.30B-gWxGQmEp5vkE79AFcduRPzm8zqhsa3rJ8jfzNz0
   
