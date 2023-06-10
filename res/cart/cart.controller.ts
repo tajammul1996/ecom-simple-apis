@@ -25,6 +25,7 @@ export const CartController = {
               name: true,
               price: true,
               images: true,
+              description: true,
             }
           }
         },
